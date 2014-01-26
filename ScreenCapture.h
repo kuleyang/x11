@@ -1,7 +1,20 @@
 #ifndef _SCREENCAPTURE_H_
 #define _SCREENCAPTURE_H_
 
-const float     X_OPEN_INTERVALTIME = 0.1;
+const float X_OPEN_INTERVALTIME = 0.1;
+const int IMAGE_BUFFER_SIZE = 1024 * 500;
+const int GRAPHIC_SIZE = 40 * 1024;
+
+typedef struct _image_item {
+   unsigned char *pOutBuf;
+   unsigned long lOutSize;
+   int count ;
+   int mod;
+   int frameIndex;
+   int endflag;
+   
+}IMAGE_ITEM, *PIMAGE_ITEM;
+
 
 typedef struct _screen_image {
   long width;

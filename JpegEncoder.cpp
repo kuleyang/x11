@@ -15,7 +15,7 @@
 #include "JpegEncoder.h"
 #include "jpeglib.h"
 
-JpegEncoder::JpegEncoder(const int width, const int height, const int quality):
+JpegEncoder::JpegEncoder(int width, int height, int quality):
     m_uWidth(width), m_uHeight(height), m_uQuality(quality)
 {
 }

@@ -4,7 +4,7 @@
 class JpegEncoder
 {
 public:
-    JpegEncoder(const int width, const int height, const int quality);
+    JpegEncoder(int width, int height, int quality);
     virtual ~JpegEncoder();
 
 public:
