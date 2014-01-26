@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
     pOut->mod = -1;
     pOut->frameIndex = -1;
     pOut->endflag = -1;
+    pOut->lOutSize = IMAGE_BUFFER_SIZE;
     pOut->pOutBuf = new unsigned char[IMAGE_BUFFER_SIZE + 1];
     
     ofs.open(jpg_out_path.c_str(), std::ofstream::out | std::ofstream::app);
@@ -44,7 +45,7 @@ int main(int argc, char *argv[])
     std::cout<<"Out Size: "<<pOut->lOutSize<<std::endl;
     // std::cout<<"Fb Size: "<<pSc->getFBSize()<<std::endl;
 
-    ofs.write((const char *)pOut->lOutSize, pOut->lOutSize);
+    ofs.write((const char *)pOut->pOutBuf, pOut->lOutSize);
     
     ofs.close();
 

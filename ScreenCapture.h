@@ -2,7 +2,7 @@
 #define _SCREENCAPTURE_H_
 
 const float X_OPEN_INTERVALTIME = 0.1;
-const int IMAGE_BUFFER_SIZE = 1024 * 500;
+const int IMAGE_BUFFER_SIZE = 1024 * 800;
 const int GRAPHIC_SIZE = 40 * 1024;
 
 typedef struct _image_item {
